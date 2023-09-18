@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/e7b3ac188d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <br />
+      <div class="forecast-app-wrapper">
+        <div class="forecast-app">
+          <form id="search-form">
+            <div class="row">
+              <div class="col-lg-8">
+                <input id="search-input"
+                  type="search"
+                  name="search"
+                  class="form-control"
+                  id="city-bar"
+                  autofocus
+                  placeholder="Where should I take you?"
+                />
+                <div class="form-text">
+                  <ul class="top-search">
+                  <li><a href="">London</a></li>
+                  <li><a href="">Kyiv</a></li>
+                  <li><a href="">Warsaw</a></li>
+                  <li><a href="">Seoul</a></li>
+                  <li><a href="">Washington</a></li>
+                  <li><a href="">Tokyo</a></li>
+                  <li><a href="">Madrid</a></li>
+                </ul>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <button type="submit" class="btn btn-primary">Search</button>
+                <button type="submit" class="btn btn-warning" id="currentLocBtn">Current</button>
+              </div>
+            </div>
+          </form>
+          <div class="current-info">
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <div class="col-lg-8">
+                    <p class="city-name">
+                      <span class="temp-down"><i class="fa-solid fa-temperature-arrow-down"></i></span><span id="city-name">KHARKIV</span>
+                    </p>
+                    </div>
+                    <div class="col">
+                      <span>
+                        <ul class="day-time">
+                          <li> <span class="current-day" id="current-day">Thursday, </span><span class="current-time" id="current-time">22:29</span></li>
+                          <li id="w-description">Clear</li>
+                        </ul>
+                    </span>
+                    </div>
+                </div>
+              <h2 class="current-t-all"> <span class="max-t" id="max-t">26°</span><a href="#" id="tempSet">C</a><span class="current-t"> <span id="actualTemp">14°</span><a href="#" id="tempSet">C</a></span><span class="min-t" id="min-t"> 9°</span><a href="#" id="tempSet">C</a></h2>
+              <div><ul class="pre-wind">
+                <li>Precipitation: <span class="pre-number" id="pre-number">43%</span></li>
+                <li>Wind: <span class="wind-number" id="wind-number">9</span><span>km/h</span></li>
+              </ul></div>
+            </div>
+            <div class="col"> <h1 class="weather-icon current-icon"><i class="fa-solid fa-cloud-moon"></i></h1></div>
+            </div>
+          </div>
+    <video
+      id="video-BG"
+      src="media/clouds-bg.mp4"
+      type="video/"
+      mp4
+      autoplay
+      muted
+      loop
+    ></video>
+    <script src="src/index2.js"></script>
+  </body>
+</html>
